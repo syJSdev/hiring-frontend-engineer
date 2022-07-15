@@ -10,13 +10,13 @@ In addition, your solution won't be viewed on a mobile device but it does need t
 
 ## The Design
 
-[Figma Prototype](https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=3933%3A43856&node-id=3933%3A43857&viewport=473%2C219%2C0.13&scaling=min-zoom&starting-point-node-id=3933%3A43857): https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=3933%3A43856&node-id=3933%3A43857&viewport=473%2C219%2C0.13&scaling=min-zoom&starting-point-node-id=3933%3A43857
+Figma Prototype: https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=3933%3A43856&node-id=3933%3A43857&viewport=473%2C219%2C0.13&scaling=min-zoom&starting-point-node-id=3933%3A43857
 
 Mock up describing the intended UI and functionality.
 
-_Note:_ It is recommended to view the prototype with the "Fit to screen" option 
+_Note:_ It is recommended to view the prototype with the "Fit to screen" option
 
-[Detailed Design Specifications ](https://app.sympli.io/app#!/projects/62d1ddd270ae032e8bba3dcd): https://app.sympli.io/app#!/projects/62d1ddd270ae032e8bba3dcd
+Detailed Design Specifications: https://app.sympli.io/p/318122bd1bdc2d7a288c1b4828dfdb9761745c2215
 
 _Note:_ The designs use a proprietary font called Proxima Nova. You are not expected to use this font. Please use an alternative but similar in appearance font.
 
@@ -29,10 +29,10 @@ _Note:_ sympli will require you to make an account. After doing that, re-clickin
 2. Table of launches
    - Infinite-scrolling table of launch data
    - Columns: mission name, launch date, launch success (outcome), rocket name, site name, mission ID
-4. Filtering and sorting for table
+3. Filtering and sorting for table
    - All columns should be sortable, with an indicator of sorting direction (if a sort is applied)
    - Search bar that filters results based on mission name
-3. Launches by nationality
+4. Launches by nationality
    - Pie chart by nationality
    - Legend with count for each country
 5. Launch site filter
@@ -49,13 +49,15 @@ _Note:_ you are not expected to complete everything. Like with real assignments,
 You'll use a publicly available GraphQL endpoint with data from SpaceX launches, found here: [https://api.spacex.land/graphql/](https://api.spacex.land/graphql/).
 
 ### Queries
-Since knowledge and skillset of GraphQL and ApolloClient are of low priority for this assignment, feel free to use the following queries in your solution. 
+
+Since knowledge and skillset of GraphQL and ApolloClient are of low priority for this assignment, feel free to use the following queries in your solution.
 **These queries are provided as is and can be used, not used, or updated as you see fit.**
 
 ### GetLaunches
-__inputs__: none
 
-__outputs__: All launch's site names, ids, and related mission ids
+**inputs**: none
+
+**outputs**: All launch's site names, ids, and related mission ids
 
 ```
 query GetLaunches {
@@ -71,9 +73,10 @@ query GetLaunches {
 ```
 
 ### GetDetailedLaunches
-__inputs__: $limit: Int, $offset: Int, $sort: String, $order: String, $siteId: String, $missionName: String
 
-__outputs__: A single page of launches defined by the $limit & $offset variables that fit the mission name search criteria ($missionName) and is sorted & ordered as described by $sort & $order inputs. 
+**inputs**: $limit: Int, $offset: Int, $sort: String, $order: String, $siteId: String, $missionName: String
+
+**outputs**: A single page of launches defined by the $limit & $offset variables that fit the mission name search criteria ($missionName) and is sorted & ordered as described by $sort & $order inputs.
 
 ```
 query GetDetailedLaunches($limit: Int = 30, $offset: Int, $sort: String, $order: String = "asc", $siteId: String, $missionName: String) {
@@ -94,9 +97,10 @@ query GetDetailedLaunches($limit: Int = 30, $offset: Int, $sort: String, $order:
 ```
 
 ### GetMissions
-__inputs__: none
 
-__outputs__:  All available SpaceX missions including their associated Payloads
+**inputs**: none
+
+**outputs**: All available SpaceX missions including their associated Payloads
 
 ```
 query GetMissions {
@@ -113,10 +117,10 @@ query GetMissions {
 ```
 
 ### GetPayloadCustomers
-__inputs__: none
 
-__outputs__:  All available SpaceX payloads with associated customers
+**inputs**: none
 
+**outputs**: All available SpaceX payloads with associated customers
 
 ```
 query GetPayloadCustomers {
@@ -126,7 +130,6 @@ query GetPayloadCustomers {
         }
     }
 ```
-
 
 ## Deadline & Submission
 
