@@ -4,7 +4,6 @@ The goal of this project is to build a single-page dashboard consisting of a few
 
 - React with TypeScript
 - TailwindCSS
-- Apollo GraphQL
 
 In addition, your solution won't be viewed on a mobile device but it does need to be responsive.
 
@@ -46,90 +45,7 @@ _Note:_ you are not expected to complete everything. Like with real assignments,
 
 ## Dataset
 
-You'll use a publicly available GraphQL endpoint with data from SpaceX launches, found here: [https://api.spacex.land/graphql/](https://api.spacex.land/graphql/).
-
-### Queries
-
-Since knowledge and skillset of GraphQL and ApolloClient are of low priority for this assignment, feel free to use the following queries in your solution.
-**These queries are provided as is and can be used, not used, or updated as you see fit.**
-
-### GetLaunches
-
-**inputs**: none
-
-**outputs**: All launch's site names, ids, and related mission ids
-
-```
-query GetLaunches {
-        launches {
-            launch_site {
-                site_id
-                site_name
-            }
-            mission_id
-        }
-    }
-
-```
-
-### GetDetailedLaunches
-
-**inputs**: $limit: Int, $offset: Int, $sort: String, $order: String, $siteId: String, $missionName: String
-
-**outputs**: A single page of launches defined by the $limit & $offset variables that fit the mission name search criteria ($missionName) and is sorted & ordered as described by $sort & $order inputs.
-
-```
-query GetDetailedLaunches($limit: Int = 30, $offset: Int, $sort: String, $order: String = "asc", $siteId: String, $missionName: String) {
-        launches(limit: $limit, offset: $offset, sort: $sort, order: $order, find: {site_id: $siteId, mission_name: $missionName}) {
-        mission_name
-        launch_date_utc
-        launch_success
-        rocket {
-            rocket_name
-        }
-        launch_site {
-            site_name
-            site_id
-        }
-        mission_id
-        }
-    }
-```
-
-### GetMissions
-
-**inputs**: none
-
-**outputs**: All available SpaceX missions including their associated Payloads
-
-```
-query GetMissions {
-        missions {
-            id
-            name
-            payloads {
-                id
-                payload_mass_kg
-                nationality
-            }
-        }
-    }
-```
-
-### GetPayloadCustomers
-
-**inputs**: none
-
-**outputs**: All available SpaceX payloads with associated customers
-
-```
-query GetPayloadCustomers {
-        payloads {
-            customers
-            id
-        }
-    }
-```
+Sample datasets are provided under `./datasets/`. **Do not alter these files**. They are intended to be used as if they were provided from a server via four graphql queries. Please instead, read these files as needed and perform any processing you see fit on the data in memory.
 
 ## Deadline & Submission
 
