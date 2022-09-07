@@ -49,7 +49,11 @@ Sample datasets are provided under `./datasets/`. **Do not alter these files**. 
 
 ## Deadline & Submission
 
-You have a week to complete this assignment. It shouldn't take that long, but we're giving you enough time to get familiar with the project. To begin your work, you should fork this repo. When you're ready to submit, share the repo with us and provide instructions to run your assignment.
+You have a week to complete this assignment. It shouldn't take that long, but we're giving you enough time to get familiar with the project.
+
+To begin your work, you should download this repository as a ZIP and create a new public repository. When you're ready to submit, share the repo with us and provide instructions to run your assignment.
+
+_Note:_ **Do not fork this project**.
 
 ## Scoring Rubric
 
