@@ -15,7 +15,7 @@ Mock up describing the intended UI and functionality.
 
 _Note:_ It is recommended to view the prototype with the "Fit to screen" option
 
-Detailed Design Specifications: https://app.sympli.io/p/318122bd1bdc2d7a288c1b4828dfdb9761745c2215
+Detailed Design Specifications: https://app.sympli.io/p/ff3750442f206960f836ef0d88d2393cc384067629
 
 _Note:_ The designs use a proprietary font called Proxima Nova. You are not expected to use this font. Please use an alternative but similar in appearance font.
 
