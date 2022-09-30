@@ -1,66 +1,62 @@
 # Cylera Frontend Developer Take-home Programming Assignment
 
-The goal of this project is to build a single-page dashboard consisting of a few components. We've created a design for this dashboard, and your job is to implement it. This repo is a starting point, with some of the scaffolding in place to get you started. You're expected to use the following technologies in your solution:
+The goal of this project is to build a single component used to render the provided dataset as a table of total payload masses by mission, filtered by nation, and display the data in a doughnut chart. We created a design for this component, and your job is to implement it. This repo is a starting point, with some of the scaffolding in place to get you started. You're expected, at a minimum, to use the following technologies in your solution:
 
 - React with TypeScript
 - TailwindCSS
 
-In addition, your solution won't be viewed on a mobile device but it does need to be responsive.
+If you choose use additional technologies, be prepared to discuss how and why that decision was made.
+
+_Note:_ Your solution won't be viewed on a mobile device but it does need to be responsive.
 
 ## The Design
 
-Figma Prototype: https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=3933%3A43856&node-id=3933%3A43857&viewport=473%2C219%2C0.13&scaling=min-zoom&starting-point-node-id=3933%3A43857
+Figma Prototype: https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=4030%3A49918&node-id=4030%3A49919&viewport=1848%2C1058%2C0.92&scaling=min-zoom&starting-point-node-id=4030%3A49919
 
-Mock up describing the intended UI and functionality.
+Detailed Designs:
 
-_Note:_ It is recommended to view the prototype with the "Fit to screen" option
+_Notes:_
 
-Detailed Design Specifications: https://app.sympli.io/p/ff3750442f206960f836ef0d88d2393cc384067629
+- The designs do not necessarily display accurate data. They are intended to describe the appearance of the component but the numbers you compute may be different.
+- The designs are not exhaustive of all functionality. It will be up to you to follow the designs' precedent and use your best judgement when implementing features that are described bellow but not represented in the designs.
+- Sypmpli may require you to make an account to access the detailed designs.
 
-_Note:_ The designs use a proprietary font called Proxima Nova. You are not expected to use this font. Please use an alternative but similar in appearance font.
+## Component & Features
 
-_Note:_ sympli will require you to make an account. After doing that, re-clicking the link should take you to the detailed view of the designs.
+### Total Payload Per Mission
 
-## Components & Features
+Bellow is a description of the component and its functionality. Please work to implement all of the following to the best of your ability.
 
-1. Summary statistic cards
-   - 3 cards stacked in the upper-right pane of the page, showing the total payload, average payload, and number of customers
-2. Table of launches
-   - Infinite-scrolling table of launch data
-   - Columns: mission name, launch date, launch success (outcome), rocket name, site name, mission ID
-3. Filtering and sorting for table
-   - All columns should be sortable, with an indicator of sorting direction (if a sort is applied)
-   - Search bar that filters results based on mission name
-4. Launches by nationality
-   - Pie chart by nationality
-   - Legend with count for each country
-5. Launch site filter
-   - Global filter that applies to the summary cards, nationality launch card, payload mission card, and table
-6. Animations
-   - Table is expandable to be full screen. Animation is demonstrated in prototype at Figma link.
-7. Dark mode
-   - Global setting can toggle UI theme from light mode to dark mode. Colors and animation are demonstrated in prototype at Figma link.
+- Doughnut chart showing total payload mass per mission.
+- Table with total payload mass for each mission to serve as a legend.
+- Dropdown menu to select each nation with an 'All Nations' option.
+  - When a single nation is selected, then the table and chart should only show data for that nationality
+  - When the 'All Nations' option is selected, then the table and chart should show data for all nationalities.
+- Each Columns is sortable.
+  - Clicking the column title once will sort that column
+  - Clicking a second time will sort the column in the opposite order
+  - Clicking a third time will remove sorting from the column.
+- An arrow indication sort direction will be present when that column is sorted
+- Hovering a doughnut chart segment should reveal a tooltip on that doughnut chart segment displaying the mission's name and total payload mass and doughnut chart segment color.
+- The legend should be vertically scrollable if needed
+- Long mission names should truncate with a '...'
 
-_Note:_ you are not expected to complete everything. Like with real assignments, you may have to make tradeoffs and compromises to deliver a product on time. You should be prepared to discuss the decisions that were made throughout the development process.
+_Note:_ You should be prepared to discuss the decisions and trade offs that were made throughout the development process.
 
 ## Dataset
 
-Sample datasets are provided under `./datasets/`. **Do not alter these files**. They are intended to be used as if they were provided from a server via four graphql queries. Please instead, read these files as needed and perform any processing you see fit on the data in memory.
+A sample dataset is provided under `./dataset/missions.json`. **Do not alter this file**. It is intended to be used as if it were provided from a server. So please instead, read this file and perform any processing you see fit on the data in memory.
 
 ## Deadline & Submission
 
-You have a week to complete this assignment. It shouldn't take that long, but we're giving you enough time to get familiar with the project.
-
-To begin your work, you should download this repository as a ZIP and create a new public repository. When you're ready to submit, share the repo with us and provide instructions to run your assignment.
-
-_Note:_ **Do not fork this project**.
+You have a week to complete this assignment. It shouldn't take that long, but we're giving you enough time to get familiar with the project. To begin your work, you should fork this repo. When you're ready to submit, share the repo with us and provide instructions to run your assignment.
 
 ## Scoring Rubric
 
 We'll be assessing the final product on the following criteria:
 
-1. Accuracy of the UI compared to the design
-2. Functionality of the interactive components
+1. Accuracy of the UI compared to the design.
+2. Functionality of the component.
 3. Code quality.
 
 ## Getting Started

@@ -1,10 +1,10 @@
 import React from "react";
-import DashboardHeader from "./components/DashboardHeader";
+import PayloadCard from "./components/PayloadCard";
 
 function App() {
   return (
     <div className="mx-10">
-      <DashboardHeader header="SpaceX Mission Dashboard" />
+      <PayloadCard />
     </div>
   );
 }

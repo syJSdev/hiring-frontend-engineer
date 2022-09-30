@@ -8,14 +8,12 @@
           {
             "id": "Thaicom 6",
             "payload_mass_kg": 3325,
-            "nationality": "Thailand",
-            "customers": ["Thaicom"]
+            "nationality": "Thailand"
           },
           {
             "id": "Thaicom 8",
             "payload_mass_kg": 3100,
-            "nationality": "Thailand",
-            "customers": ["Thaicom"]
+            "nationality": "Thailand"
           }
         ]
       },
@@ -26,14 +24,12 @@
           {
             "id": "Telstar 19V",
             "payload_mass_kg": 7076,
-            "nationality": "Canada",
-            "customers": ["Telesat"]
+            "nationality": "Canada"
           },
           {
             "id": "Telstar 18V",
             "payload_mass_kg": 7060,
-            "nationality": "Canada",
-            "customers": ["Telesat"]
+            "nationality": "Canada"
           }
         ]
       },
@@ -44,50 +40,42 @@
           {
             "id": "Iridium NEXT 1",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 2",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 3",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 4",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 5",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 6",
             "payload_mass_kg": 4300,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 7",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           },
           {
             "id": "Iridium NEXT 8",
             "payload_mass_kg": 9600,
-            "nationality": "United States",
-            "customers": ["Iridium Communications"]
+            "nationality": "United States"
           }
         ]
       },
@@ -98,20 +86,17 @@
           {
             "id": "Dragon Qualification Unit",
             "payload_mass_kg": null,
-            "nationality": "United States",
-            "customers": ["SpaceX"]
+            "nationality": "United States"
           },
           {
             "id": "COTS Demo Flight 1",
             "payload_mass_kg": null,
-            "nationality": "United States",
-            "customers": ["NASA(COTS)"]
+            "nationality": "United States"
           },
           {
             "id": "COTS Demo Flight 2",
             "payload_mass_kg": 525,
-            "nationality": "United States",
-            "customers": ["NASA(COTS)"]
+            "nationality": "United States"
           },
           null,
           null,
@@ -137,28 +122,24 @@
           {
             "id": "SES-8",
             "payload_mass_kg": 3170,
-            "nationality": "Luxembourg",
-            "customers": ["SES"]
+            "nationality": "Luxembourg"
           },
           {
             "id": "SES-9",
             "payload_mass_kg": 5271,
-            "nationality": "Luxembourg",
-            "customers": ["SES"]
+            "nationality": "Luxembourg"
           },
           {
             "id": "SES-10",
             "payload_mass_kg": 5300,
-            "nationality": "Luxembourg",
-            "customers": ["SES"]
+            "nationality": "Luxembourg"
           },
           null,
           null,
           {
             "id": "SES-12",
             "payload_mass_kg": 5383.85,
-            "nationality": "Luxembourg",
-            "customers": ["SES"]
+            "nationality": "Luxembourg"
           }
         ]
       },
@@ -169,14 +150,12 @@
           {
             "id": "JCSAT-2B",
             "payload_mass_kg": 4696,
-            "nationality": "Japan",
-            "customers": ["SKY Perfect JSAT Group"]
+            "nationality": "Japan"
           },
           {
             "id": "JCSAT-16",
             "payload_mass_kg": 4600,
-            "nationality": "Japan",
-            "customers": ["SKY Perfect JCSAT Group"]
+            "nationality": "Japan"
           }
         ]
       },
@@ -187,14 +166,12 @@
           {
             "id": "AsiaSat 8",
             "payload_mass_kg": 4535,
-            "nationality": "Hong Kong",
-            "customers": ["AsiaSat"]
+            "nationality": "Hong Kong"
           },
           {
             "id": "AsiaSat 6",
             "payload_mass_kg": 4428,
-            "nationality": "Hong Kong",
-            "customers": ["AsiaSat"]
+            "nationality": "Hong Kong"
           }
         ]
       },
@@ -205,20 +182,17 @@
           {
             "id": "CRS-1",
             "payload_mass_kg": 400,
-            "nationality": "United States",
-            "customers": ["NASA (CRS)"]
+            "nationality": "United States"
           },
           {
             "id": "Orbcomm-OG2-M1",
             "payload_mass_kg": 1316,
-            "nationality": "United States",
-            "customers": ["Orbcomm"]
+            "nationality": "United States"
           },
           {
             "id": "Orbcomm-OG2-M2",
             "payload_mass_kg": 2034,
-            "nationality": "United States",
-            "customers": ["Orbcomm"]
+            "nationality": "United States"
           }
         ]
       },
@@ -229,8 +203,7 @@
           {
             "id": "ABS-3A",
             "payload_mass_kg": 1954,
-            "nationality": "Hong Kong",
-            "customers": ["ABS"]
+            "nationality": "Hong Kong"
           },
           null
         ]
@@ -242,14 +215,12 @@
           {
             "id": "ABS-3A",
             "payload_mass_kg": 1954,
-            "nationality": "Hong Kong",
-            "customers": ["ABS"]
+            "nationality": "Hong Kong"
           },
           {
             "id": "ABS-2A",
             "payload_mass_kg": 1800,
-            "nationality": "Hong Kong",
-            "customers": ["ABS"]
+            "nationality": "Hong Kong"
           }
         ]
       }
