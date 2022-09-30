@@ -13,7 +13,7 @@ _Note:_ Your solution won't be viewed on a mobile device but it does need to be 
 
 Figma Prototype: https://www.figma.com/proto/4YRep3EnjvbRhlgJnZ4fMl/Tailwind-Figma-UI?page-id=4030%3A49918&node-id=4030%3A49919&viewport=1848%2C1058%2C0.92&scaling=min-zoom&starting-point-node-id=4030%3A49919
 
-Detailed Designs:
+Detailed Designs: https://app.sympli.io/p/dab08680db832df845079b495048f71eb0f2a3d1c5
 
 _Notes:_
 
