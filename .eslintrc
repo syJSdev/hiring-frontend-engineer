@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:promise/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["promise", "jsdoc", "prettier"],
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "jsdoc/require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "ArrowFunctionExpression": false,
+          "FunctionDeclaration": false
+        },
+        "contexts": [
+          "FunctionDeclaration:not([id.name=/^[A-Z].+/])",
+          "VariableDeclarator:not([id.name=/^[A-Z].+/]) > ArrowFunctionExpression"
+        ]
+      }
+    ],
+    "promise/always-return": "off"
+  }
+}

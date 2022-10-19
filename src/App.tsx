@@ -1,5 +1,4 @@
-import React from "react";
-import PayloadCard from "./components/PayloadCard";
+import PayloadCard from './components/PayloadCard';
 
 function App() {
   return (
