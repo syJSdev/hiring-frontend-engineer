@@ -19,13 +19,9 @@
       "warn",
       {
         "require": {
-          "ArrowFunctionExpression": false,
           "FunctionDeclaration": false
         },
-        "contexts": [
-          "FunctionDeclaration:not([id.name=/^[A-Z].+/])",
-          "VariableDeclarator:not([id.name=/^[A-Z].+/]) > ArrowFunctionExpression"
-        ]
+        "contexts": ["FunctionDeclaration:not([id.name=/^[A-Z].+/])"]
       }
     ],
     "jsdoc/require-param-type": "off",
