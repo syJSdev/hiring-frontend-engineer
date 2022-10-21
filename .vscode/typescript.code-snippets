@@ -1,0 +1,45 @@
+{
+  "trfc": {
+    "prefix": "trfc",
+    "description": "React Component (Typescript)",
+    "body": [
+      "import type { FC } from 'react';",
+      "",
+      "export interface ${TM_FILENAME_BASE}Props {",
+      "};",
+      "",
+      "const $TM_FILENAME_BASE: FC<${TM_FILENAME_BASE}Props> = ({}) => {",
+      "\treturn (",
+      "\t\t<>$0</>",
+      "\t)",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE;",
+      ""
+    ]
+  },
+  "trfgc": {
+    "prefix": "trfgc",
+    "description": "React Component with Generic type (Typescript)",
+    "body": [
+      "import type { ReactElement } from 'react';",
+      "",
+      "export interface ${TM_FILENAME_BASE}Props<T> {",
+      "};",
+      "",
+      "function $TM_FILENAME_BASE<T>({}: ${TM_FILENAME_BASE}Props<T>): ReactElement {",
+      "\treturn (",
+      "\t\t<>$0</>",
+      "\t)",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE;",
+      ""
+    ]
+  },
+  "exdf": {
+    "prefix": "exdf",
+    "description": "Export default",
+    "body": ["export { default } from './${TM_DIRECTORY/(.*)\\///}'", ""]
+  }
+}
