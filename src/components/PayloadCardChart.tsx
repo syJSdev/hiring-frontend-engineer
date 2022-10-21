@@ -70,7 +70,7 @@ const PayloadCardChart: FC<PayloadCardChartProps> = ({ className, dataset }) => 
         borderWidth: 0,
         hoverBorderWidth: 4,
         borderColor: dataset.map((item) => rgba(item.color, 0.2)),
-        spacing: 6,
+        spacing: dataset.length > 2 ? 4 : 0,
       },
     ],
   };

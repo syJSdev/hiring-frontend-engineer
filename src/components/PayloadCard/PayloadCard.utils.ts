@@ -24,8 +24,10 @@ export function getColors(count: number) {
  */
 export function useMissionSummary(missions: Mission[]): MissionSummaryByNation {
   const summary: MissionSummaryByNation = useMemo(() => {
+    const colors = getColors(missions.length);
+
     const summaryPerNation = missions.reduce<MissionSummaryByNation>(
-      (sum, mission) => {
+      (sum, mission, index) => {
         if (!mission.payloads) return sum;
 
         const summaryPerMission = mission.payloads.reduce<{
@@ -55,7 +57,7 @@ export function useMissionSummary(missions: Mission[]): MissionSummaryByNation {
             id: mission.id,
             name: mission.name,
             total_payload_mass_kg: totalPayloadPerMissionAndNation,
-            color: '',
+            color: '#' + colors[index],
           };
 
           sum[nationality].missions.push(item);
@@ -66,7 +68,7 @@ export function useMissionSummary(missions: Mission[]): MissionSummaryByNation {
           id: mission.id,
           name: mission.name,
           total_payload_mass_kg: totalPayloadPerMission,
-          color: '',
+          color: '#' + colors[index],
         };
         sum[''].total_payload_mass_kg += totalPayloadPerMission;
         sum[''].missions.push(allNationSummary);
@@ -80,14 +82,6 @@ export function useMissionSummary(missions: Mission[]): MissionSummaryByNation {
         },
       }
     );
-
-    Object.entries(summaryPerNation).forEach(([nation, item]) => {
-      const count = item.missions.length;
-      const colors = getColors(count);
-      colors.forEach((color, index) => {
-        item.missions[index].color = '#' + color;
-      });
-    });
 
     return summaryPerNation;
   }, [missions]);
