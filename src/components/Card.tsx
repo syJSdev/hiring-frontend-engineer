@@ -19,14 +19,7 @@ const Card: FC<CardProps> = ({ className, title, titleActions, children }) => {
           {!!titleActions && <div className="flex justify-end items-center">{titleActions}</div>}
         </div>
       )}
-      <div
-        className={cls(
-          'bg-white p-6 flex flex-col md:flex-row',
-          isHeadExists ? 'rounded-b-lg' : 'rounded-lg'
-        )}
-      >
-        {children}
-      </div>
+      <div className={cls('bg-white p-6', isHeadExists ? 'rounded-b-lg' : 'rounded-lg')}>{children}</div>
     </div>
   );
 };

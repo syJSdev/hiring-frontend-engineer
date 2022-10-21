@@ -40,8 +40,13 @@ const PayloadCard: FC<PayloadCardProps> = ({ className, missions }) => {
         </>
       }
     >
-      <PayloadCardChart dataset={summaryByNation[selectedNation]?.missions ?? []} />
-      <PayloadCardTable dataset={summaryByNation[selectedNation]?.missions ?? []} />
+      <div className="flex flex-col md:flex-row md:h-60">
+        <PayloadCardChart className="h-full" dataset={summaryByNation[selectedNation]?.missions ?? []} />
+        <PayloadCardTable
+          className="h-60 md:h-full"
+          dataset={summaryByNation[selectedNation]?.missions ?? []}
+        />
+      </div>
     </Card>
   );
 };

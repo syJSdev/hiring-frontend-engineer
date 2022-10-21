@@ -93,49 +93,51 @@ const PayloadCardTable: FC<PayloadCardTableProps> = ({ className, dataset }) => 
   };
 
   return (
-    <table className={cls('table-fixed border-collapse text-left w-full', className)}>
-      <thead>
-        <tr className="uppercase text-charcoal">
-          <th scope="col" className="max-w-0 w-2/5 py-2 pr-4">
-            <button
-              onClick={onClickTableHeader('name')}
-              className="w-full inline-flex items-center justify-start font-bold"
-              aria-sort={sortBy.column === 'name' ? sortBy.order : undefined}
-            >
-              <span className="truncate">Mission</span>
-              {renderSortIcon('name')}
-            </button>
-          </th>
-          <th scope="col" className="max-w-0 w-3/5 py-2 px-4">
-            <button
-              onClick={onClickTableHeader('total_payload_mass_kg')}
-              className="w-full inline-flex items-center justify-start font-bold"
-              aria-sort={sortBy.column === 'total_payload_mass_kg' ? sortBy.order : undefined}
-            >
-              <span className="truncate">Total Payload Mass</span>
-              {renderSortIcon('total_payload_mass_kg')}
-            </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedData.map((g) => (
-          <tr key={g.id}>
-            <th scope="row" className="max-w-0 w-2/5 py-2 pr-4 border-b-2 border-ghost-white">
-              <span className="w-full inline-flex items-center justify-start font-normal">
-                <span className="h-2 w-2 rounded-full mr-3" style={{ backgroundColor: g.color }} />
-                <span className="flex-1 truncate">{g.name}</span>
-              </span>
+    <div className={cls('overflow-auto', className)}>
+      <table className={'table-fixed border-collapse text-left w-full'}>
+        <thead>
+          <tr className="uppercase text-charcoal">
+            <th scope="col" className="max-w-0 w-2/5 py-2 pr-4 sticky top-0 bg-white z-[1]">
+              <button
+                onClick={onClickTableHeader('name')}
+                className="w-full inline-flex items-center justify-start font-bold"
+                aria-sort={sortBy.column === 'name' ? sortBy.order : undefined}
+              >
+                <span className="truncate">Mission</span>
+                {renderSortIcon('name')}
+              </button>
             </th>
-            <td className=" max-w-0 w-3/5 py-2 px-4 border-b-2 border-ghost-white">
-              <span className="w-full opacity-60 font-normal truncate">
-                {numberFormatter.format(g.total_payload_mass_kg)} KG
-              </span>
-            </td>
+            <th scope="col" className="max-w-0 w-3/5 py-2 px-4 sticky top-0 bg-white z-[1]">
+              <button
+                onClick={onClickTableHeader('total_payload_mass_kg')}
+                className="w-full inline-flex items-center justify-start font-bold"
+                aria-sort={sortBy.column === 'total_payload_mass_kg' ? sortBy.order : undefined}
+              >
+                <span className="truncate">Total Payload Mass</span>
+                {renderSortIcon('total_payload_mass_kg')}
+              </button>
+            </th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sortedData.map((g) => (
+            <tr key={g.id}>
+              <th scope="row" className="max-w-0 w-2/5 py-2 pr-4 border-b-2 border-ghost-white bg-white">
+                <span className="w-full inline-flex items-center justify-start font-normal">
+                  <span className="h-2 w-2 rounded-full mr-3" style={{ backgroundColor: g.color }} />
+                  <span className="flex-1 truncate">{g.name}</span>
+                </span>
+              </th>
+              <td className=" max-w-0 w-3/5 py-2 px-4 border-b-2 border-ghost-white bg-white">
+                <span className="w-full opacity-60 font-normal truncate">
+                  {numberFormatter.format(g.total_payload_mass_kg)} KG
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
